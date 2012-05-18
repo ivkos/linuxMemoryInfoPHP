@@ -7,7 +7,7 @@ Using this PHP class you can query information about the system memory of your L
 This class works by reading **/proc/meminfo** - a file available on Linux servers which contains information about the system memory. This information is sorted neatly in an array and output by the class.
 
 ## Example
-### PHP Code:
+### PHP code:
 ```php
 <?php
 
@@ -15,7 +15,7 @@ require __DIR__ . '/linuxMemoryInfo.class.php';
 $m = new linuxMemoryInfo();
 
 // All values this class returns are in kilobytes (kB).
-print_r($m->getMemoryInfo());                         // (array)  Prints full memory information
+print_r($m->getMemoryInfo());                         // (array)  Prints full information about the RAM
 echo $m->getMemoryInfo("MemTotal") . "\n";            // (int)    Prints the total amount of RAM
 echo $m->getMemoryInfo("MemFree", true) . "\n";       // (string) Prints the amount of free RAM with a suffix kB
 
@@ -26,7 +26,7 @@ echo round($m->getMemoryInfo("Active")/1024) . " MB"; // (int)    Prints the amo
 ?>
 ```
 
-### Sample Output:
+### Sample output:
 ```
 Array
 (
