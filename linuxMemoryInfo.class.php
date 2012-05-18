@@ -18,7 +18,7 @@ class linuxMemoryInfo
             if ($preserveSuffix) {
                 $memoryInfo[$key] = trim($value);
             } else {
-                $memoryInfo[$key] = trim(str_replace('kB', '', $value));
+                $memoryInfo[$key] = (int) trim(str_replace('kB', '', $value));
             }
         }
         
